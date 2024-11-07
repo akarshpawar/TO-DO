@@ -1,11 +1,8 @@
 package com.test.week01_00.ui.viewmodel
 
-import android.app.Application
 import androidx.compose.runtime.*
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.test.week01_00.AppDatabase
 import com.test.week01_00.data.model.Task
 import com.test.week01_00.data.repositoryimpl.TaskRepositoryImpl
 import kotlinx.coroutines.CoroutineScope
@@ -14,7 +11,6 @@ import kotlinx.coroutines.launch
 
 class AddTaskScreenViewModel(val repositoryImpl: TaskRepositoryImpl) :
     ViewModel() {
-//    val repositoryImpl: TaskRepositoryImpl? = null
     var taskTitle = mutableStateOf("")
         private set
     var taskDescription = mutableStateOf("")
